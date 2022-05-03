@@ -14,5 +14,6 @@ button_list = ['.iiaovt > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)
 continue_button = '.sc-eXfwOT > span:nth-child(2) > div'
 result_text = '.sc-gsxalj > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div'
 close_button = view_correct_answer_button = '.sc-eXfwOT > span:nth-child(1) > div'
+correct_answer_text = '.sc-nUItV > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span'
 
 exit_button = 'span.anticon:nth-child(2) > svg'
