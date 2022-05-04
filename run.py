@@ -2,10 +2,7 @@ import os
 from time import sleep
 
 import pickle
-import keyboard
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, \
-    ElementNotInteractableException
 
 import locations
 
