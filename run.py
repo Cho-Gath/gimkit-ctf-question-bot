@@ -1,4 +1,3 @@
-import os
 from time import sleep
 
 import pickle
@@ -7,10 +6,10 @@ from selenium import webdriver
 import locations
 
 
-def safe_click(driver, button):
+def safe_click(driver, element):
     while True:
         try:
-            button = driver.find_element_by_css_selector(button)
+            button = driver.find_element_by_css_selector(element)
             button.click()
             break
         # except NoSuchElementException or StaleElementReferenceException or ElementNotInteractableException:
@@ -26,13 +25,14 @@ def safe_find_text(driver, element):
         except Exception:
             sleep(0.2)
 
-
-with open('./vocab_set.pickle', 'rb') as file:
+name = input('vocab set name: ')
+with open(f'./{name}.pickle', 'rb') as file:
     vocab_set = pickle.load(file)
 
-driver = webdriver.Firefox(executable_path=os.getenv("geckodriver_path"), service_log_path=os.devnull)
+driver = webdriver.Firefox()
 
 game_code = input('Game Code: ')
+
 
 driver.get('https://www.gimkit.com/join?gc=' + game_code)
 
